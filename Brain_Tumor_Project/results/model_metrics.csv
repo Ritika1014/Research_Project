@@ -1,0 +1,9 @@
+modality,model_name,task,accuracy,precision_macro,recall_macro,f1_macro,roc_auc,parameters,notes
+MRI Neuroimaging,EfficientNetB0,4-Class Brain Tumour Classification,0.8325,0.8331,0.8325,0.8271,0.9505,4379559,"ImageNet transfer learning, 224x224 input"
+MRI Neuroimaging,ResNet50,4-Class Brain Tumour Classification,0.8025,0.8134,0.8025,0.793,0.9427,24114308,"ImageNet transfer learning, 224x224 input"
+MRI Neuroimaging,DenseNet121,4-Class Brain Tumour Classification,0.775,0.7921,0.775,0.763,0.9429,7301956,"ImageNet transfer learning, 224x224 input"
+MRI Neuroimaging,Custom CNN,4-Class Brain Tumour Classification,0.25,0.0625,0.25,0.1,0.5442,1970628,"ImageNet transfer learning, 224x224 input"
+Gene Expression,RANDOMFOREST,Glioma Subtyping (GBM vs LGG),1.0,1.0,1.0,1.0,1.0,500,67 Consensus Biomarker Genes
+Gene Expression,XGBOOST,Glioma Subtyping (GBM vs LGG),1.0,1.0,1.0,1.0,1.0,400,67 Consensus Biomarker Genes
+Gene Expression,MLP,Glioma Subtyping (GBM vs LGG),0.9645,0.9286,0.9286,0.9645,0.9935,115000,67 Consensus Biomarker Genes
+Multimodal Radiogenomics,Late-Fusion Calibrated Ensemble,Verified Glioma Radiogenomics Fusion,0.9982,0.998,0.9982,0.9981,0.9995,4380059,EfficientNetB0 (1280-d) + Random Forest (67-d) Calibrated Head

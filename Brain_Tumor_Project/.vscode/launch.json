@@ -1,0 +1,51 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Streamlit: Clinical AI Dashboard",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "streamlit",
+            "args": [
+                "run",
+                "${workspaceFolder}/app.py",
+                "--server.port=8501"
+            ],
+            "jinja": true,
+            "justMyCode": true,
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: Run Evaluation (All Models)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/evaluate.py",
+            "args": [
+                "--mode",
+                "all"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: Run Health Check (59 Points)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/health_check.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: Run Gene Classifiers (Phase 6)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/run_gene_models.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: Run Multimodal Fusion (Phase 7)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/run_phase7_multimodal.py",
+            "console": "integratedTerminal"
+        }
+    ]
+}

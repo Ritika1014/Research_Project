@@ -1,0 +1,9 @@
+image,true_class,predicted_class,confidence,correct
+Te-gl_1.jpg,glioma,glioma,0.9319,True
+Te-gl_10.jpg,glioma,glioma,0.9323,True
+Te-aug-me_1.jpg,meningioma,glioma,0.9323,False
+Te-aug-me_10.jpg,meningioma,glioma,0.9315,False
+Te-no_1.jpg,notumor,glioma,0.9313,False
+Te-no_10.jpg,notumor,glioma,0.9312,False
+Te-pi_1.jpg,pituitary,glioma,0.9318,False
+Te-pi_10.jpg,pituitary,glioma,0.9314,False

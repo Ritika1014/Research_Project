@@ -1,0 +1,6 @@
+Component,Metric,Value,Classes,Phase
+EfficientNetB0 (MRI),Test Accuracy,83.25%,"glioma, meningioma, notumor, pituitary",5
+RandomForest (Gene),Test Accuracy,100.0%,"GBM, LGG",7
+XGBoost (Gene),Test Accuracy,100.0%,"GBM, LGG",7
+MLP (Gene),Test Accuracy,96.45%,"GBM, LGG",7
+Late Fusion (Multimodal),Strategy,Probability averaging (TCGA glioma only),"GBM, LGG",7

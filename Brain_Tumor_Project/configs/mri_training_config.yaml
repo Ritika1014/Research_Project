@@ -1,0 +1,55 @@
+# ============================================================
+# configs/mri_training_config.yaml
+# Phase 5 — MRI Deep Learning — Training Configuration
+# Project: AI-Driven Multimodal Classification of Brain Tumours
+# ============================================================
+
+# ── Dataset Paths ─────────────────────────────────────────────
+data:
+  train_dir:      "data/processed/MRI/Training"
+  test_dir:       "data/processed/MRI/Testing"
+  val_split:      0.2          # 20% of Training set → validation
+  image_size:     [224, 224]
+  channels:       3
+  class_names:    ["glioma", "meningioma", "notumor", "pituitary"]
+  num_classes:    4
+
+# ── Training Hyperparameters ──────────────────────────────────
+training:
+  batch_size:       32
+  epochs:           50
+  early_stop_patience:  10
+  reduce_lr_patience:   5
+  reduce_lr_factor:     0.5
+  min_lr:               1.0e-7
+  seed:                 42
+
+# ── Optimizer ────────────────────────────────────────────────
+optimizer:
+  name:           "adam"
+  learning_rate:  1.0e-4
+  weight_decay:   0.0
+
+# ── Custom CNN Architecture ───────────────────────────────────
+custom_cnn:
+  conv_filters:   [32, 64, 128, 256, 512]
+  dense_units:    [512, 256]
+  dropout_rate:   0.5
+  activation:     "relu"
+
+# ── Transfer Learning Base Models ─────────────────────────────
+transfer_learning:
+  dense_units:    [256]
+  dropout_rate:   0.5
+  fine_tune_at:   100          # layers to freeze (counted from end)
+  fine_tune_lr:   1.0e-5
+
+# ── Output Paths ─────────────────────────────────────────────
+output:
+  models_dir:       "models"
+  results_dir:      "results/mri_model"
+  reports_dir:      "reports"
+  logs_dir:         "logs/mri_training"
+  history_csv:      "results/mri_model/training_history.csv"
+  best_model:       "models/best_mri_model.keras"
+  gradcam_meta:     "models/gradcam_meta.json"

@@ -1,0 +1,5 @@
+model,accuracy,balanced_accuracy,precision_macro,recall_macro,f1_macro,roc_auc_macro,cohen_kappa,mcc,parameters,training_time_s
+EfficientNetB0,0.8325,0.8325,0.83307,0.8325,0.82709,0.95053,0.77667,0.77982,4379559,48.47
+ResNet50,0.8025,0.8025,0.81335,0.8025,0.79298,0.94268,0.73667,0.74498,24114308,110.9
+DenseNet121,0.775,0.775,0.79205,0.775,0.76297,0.94288,0.7,0.71259,7301956,89.58
+Custom CNN,0.25,0.25,0.0625,0.25,0.1,0.5442,0.0,0.0,1970628,217.42

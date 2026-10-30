@@ -1,0 +1,16 @@
+sample,mode,predicted_class,confidence,true_label
+P0,MRI-only,glioma,0.9319,GBM
+P0,Gene-only,GBM,0.9962,GBM
+P0,Multimodal,GBM,0.9962,GBM
+P1,MRI-only,glioma,0.9323,GBM
+P1,Gene-only,GBM,0.9981,GBM
+P1,Multimodal,GBM,0.9981,GBM
+P2,MRI-only,glioma,0.9323,GBM
+P2,Gene-only,GBM,0.9875,GBM
+P2,Multimodal,GBM,0.9875,GBM
+P3,MRI-only,glioma,0.932,LGG
+P3,Gene-only,LGG,0.996,LGG
+P3,Multimodal,LGG,0.996,LGG
+P4,MRI-only,glioma,0.9318,LGG
+P4,Gene-only,LGG,0.9972,LGG
+P4,Multimodal,LGG,0.9972,LGG

@@ -1,0 +1,6 @@
+demo_pair,tcga_barcode,true_gene_label,mri_pred,mri_conf,gene_pred,gene_conf,fusion_pred,fusion_conf,fusion_mode,warning
+0,TCGA-27-1832-01,GBM,glioma,0.9319,GBM,0.9962,GBM,0.9962,multimodal-late-fusion,
+1,TCGA-27-1831-01,GBM,glioma,0.9323,GBM,0.9981,GBM,0.9981,multimodal-late-fusion,
+2,TCGA-28-5216-01,GBM,glioma,0.9323,GBM,0.9875,GBM,0.9875,multimodal-late-fusion,
+3,TCGA-E1-5319-01,LGG,glioma,0.932,LGG,0.996,LGG,0.996,multimodal-late-fusion,
+4,TCGA-HT-7693-01,LGG,glioma,0.9318,LGG,0.9972,LGG,0.9972,multimodal-late-fusion,

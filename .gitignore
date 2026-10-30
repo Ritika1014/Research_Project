@@ -1,0 +1,126 @@
+# ==============================================================================
+# .gitignore — AI-Driven Multimodal Classification of Brain Tumours
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Python & Virtual Environments
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+pip-wheel-metadata/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ------------------------------------------------------------------------------
+# 2. Operating System & Editor Metadata
+# ------------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# VS Code settings (local configuration)
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+
+# ------------------------------------------------------------------------------
+# 3. Cache, Logs & Temporary Files
+# ------------------------------------------------------------------------------
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+cache/
+.cache/
+tmp/
+temp/
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# Runtime and preview image dumps
+Brain_Tumor_Project/logs/*
+!Brain_Tumor_Project/logs/.gitkeep
+Brain_Tumor_Project/gradcam_preview/
+Brain_Tumor_Project/shap_preview/
+Brain_Tumor_Project/results/gradcam_preview/
+temp_*.png
+temp_*.jpg
+
+# ------------------------------------------------------------------------------
+# 4. Datasets (Kept local due to size & patient data privacy)
+# ------------------------------------------------------------------------------
+# Raw multi-modal datasets (~426 MB)
+Brain_Tumor_Multimodal_Datasets/
+!Brain_Tumor_Multimodal_Datasets/Gene_Expression/Sample_Test_Files/
+!Brain_Tumor_Multimodal_Datasets/README.md
+
+# Processed full datasets (~195 MB)
+Brain_Tumor_Project/data/processed/MRI/
+Brain_Tumor_Project/data/processed/Gene_Expression/
+Brain_Tumor_Project/processed/
+
+# Preserve lightweight feature sets & patient mapping metadata (< 2 MB)
+!Brain_Tumor_Project/data/processed/feature_sets/
+
+# ------------------------------------------------------------------------------
+# 5. Heavy Trained Models & Checkpoints (>10 MB)
+# ------------------------------------------------------------------------------
+# Large Deep Learning neural network checkpoints
+*.keras
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.pb
+*.safetensors
+Brain_Tumor_Project/models/*.keras
+Brain_Tumor_Project/models/*.h5
+
+# Keep lightweight tabular ML models and metadata (< 1.5 MB each)
+!Brain_Tumor_Project/models/*.json
+!Brain_Tumor_Project/models/*.pkl
+!Brain_Tumor_Project/models/README.md
+
+# ------------------------------------------------------------------------------
+# 6. Secrets & Environment Credentials
+# ------------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.yaml
+
